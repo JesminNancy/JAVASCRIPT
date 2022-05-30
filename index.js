@@ -1,21 +1,28 @@
-// Area of Various Shapes
+//Display Even/Odd Number
 
-/* var base = prompt("Enter Base Number : ");
-var height = prompt("Enter Height : ");
-var area = base * height ;
+var num = prompt("Enter A Number : ");
 
-document.write("Area = " + area);*/
+if(num%2 == 0)
+document.write("Even");
+if(num%2 !=0)
+document.write("Odd");
 
-// Temperature Converter
+// If Else if Else
 
-/* var farn = prompt("Enter Fahrenheit Number : ");
+var marks = prompt("Enter Your Marks : ");
 
-var cel = (farn-32) * (5/9);
+if(marks>=80)
+  document.write("Your Grade is A+");
+else if(marks>=70)
+  document.write("Your Grade is A");
+else if(marks>=60)
+  document.write("Your Grade is A-");
+else if(marks>=50)
+  document.write("Your Grade is B");
+else if(marks>=40)
+  document.write("Your Grade is C");
+else if(marks>=33)
+  document.write("Your Grade is D");
+else
+  document.write("You Are Failed");
 
-document.write("Celsius is " + cel); */
-
-var cel = prompt("Enter Celsius Number : ");
-
-var farn = (cel*9/5) + 32;
-
-document.write("Celsius is " + farn);

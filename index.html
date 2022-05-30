@@ -11,16 +11,33 @@
   
   
   <script>
-  
-  var firstName = "Jesmin";
-  var lastName = " Nancy";
-  var fullName = firstName + lastName ;
-  document.write("My name is " + fullName + "<br>");
-  
-  var num1 = 20;
-  var num2 = 40; 
-  document.write("num1 = " + num1 + " and num2 = " + num2);
-    
+      
+      /*
+      var text1 = "Bangladesh";
+      var text2 = " is a beautiful country";
+      text = text.toUpperCase();
+      text = text.toLowerCase();
+      var len = text.length;
+      var text = text1.slice(2, 5);
+      var text = text1.concat(text2);
+     
+     document.write("Number of Character " + len);
+     document.write(text.charAt(3));
+     document.write(text);
+    var text1 = prompt("Enter Your Name : ");
+     document.write("Number of Character " + text1.length);
+    document.write(text); */
+     
+      var firstName = prompt("Enter Your Firstname :");
+      var lastName = prompt("Enter Your Lastname :");
+      var fullName = firstName + lastName;
+      var text1 = fullName.toUpperCase();
+      var text = fullName.length;
+      document.write(fullName + "<br>");
+      document.write("total length of no: " + text + "<br>");
+      document.write(text1 + "<br>");
+      document.write("The second letter of your name is " + fullName.charAt(1));
+      
   </script>
 </body>
 </html>

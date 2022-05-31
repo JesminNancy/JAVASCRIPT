@@ -1,44 +1,45 @@
-// Creating Functions
+//Array Methods...
+var names = ["Nancy","Radifa","Ripon","Asma"];
+console.log(names);
 
-// Addition Function
+//Push..
+// names.push("Rahim");
+// console.log(names);
 
-function addition(x,y){
-  var result = x+y;
-  document.write("Sum = " + result + "<br>");
-}
+//POP..
+// names.pop();
+// console.log(names);
+//Shift..
+// names.shift();
+// console.log(names);
+//UnShift..
+// names.unshift("Rahim");
+// console.log(names);
 
-// Subtraction Function
+// Adding Element Using Splice
+// names.splice(2,1,"Karim Sokina");
+// console.log(names);
 
-function subtraction(x,y){
-  var result = x-y;
-  document.write("Sub = " + result + "<br>");
-}
+// Removing Element Using Splice
+//  names.splice(1,2);
+//  console.log(names);
+ 
+ // Slice
+ 
+//  var newarray = names.slice(1)
+//  console.log(newarray);
+//  console.log(names);
 
-// Multiplication Function
+// Sorting
+// var sortName = names.sort();
+// names.reverse();
+// console.log(sortName);
 
-function multiplication(x,y){
-  var result = x*y;
-  document.write("Multiplication = " + result + "<br>");
-}
-// Division Function
+//Number Sorting
 
-function division(x,y){
-  var result = x/y;
-  document.write("Division = " + result + "<br>");
-}
-// Modulus Function
-
-function modulus(x,y){
-  var result = x%y;
-  document.write("Modulus = " + result + "<br>");
-}
-
-
-
-// Calling Function
-
-addition(50,300);
-subtraction(45,9);
-multiplication(5,9);
-division(250,10);
-modulus(20,400);
+var number = [10,20,45,68,3,1];
+number.sort(function(a,b){
+  // return a-b;
+  return b-a;
+});
+console.log(number);

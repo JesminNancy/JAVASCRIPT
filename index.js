@@ -1,27 +1,24 @@
-// for(var i=1; i<=100; i++){
+// Break and Continue...
 
-// document.write(" "+ i);
-// }
-
-
-// var i= 1;
-// while(i<=100){
-// document.write(" "+ i);
-// i++;
-// }
-
-// var i= 1;
-// do{
-//   document.write(" "+ i);
-//   i++;
-// }while(i<=100)
+/* for(var i= 1; i<=100 ; i++){
+    
+    if(i== 10){
+      break;
+    }
+  
+  document.write(" " + i);
+} */
 
 
-var i= 1;
-while(i<=100){
-
-if(i%3==0 && i%5==0){
-document.write(i);
-}
-i++;
-}
+for(var i= 1; i<=100 ; i++){
+    
+    // if(i %2 == 0){
+    //   continue;
+    // }
+    
+    if(i %2 !== 0){
+      continue;
+    }
+  
+  document.write(" " + i);
+} 

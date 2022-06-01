@@ -1,45 +1,27 @@
-//Array Methods...
-var names = ["Nancy","Radifa","Ripon","Asma"];
-console.log(names);
+//How to crate object
+//How to print the value of an object
+//Adding a constructor
 
-//Push..
-// names.push("Rahim");
-// console.log(names);
+function Student(name,age,cgpa,lang){
 
-//POP..
-// names.pop();
-// console.log(names);
-//Shift..
-// names.shift();
-// console.log(names);
-//UnShift..
-// names.unshift("Rahim");
-// console.log(names);
+  this.name = name;
+  this.age = age;
+  this.cgpa = cgpa;
+  this.lang = lang;
+  
+  this.display = function(){
+  
+    console.log(this.name);
+    console.log(this.age);
+    console.log(this.cgpa);
+    console.log(this.lang);
+  }
+}
 
-// Adding Element Using Splice
-// names.splice(2,1,"Karim Sokina");
-// console.log(names);
+var student1 = new Student ("Nancy",27,4.23,["Bangla","English","Hindi"]);
+var student2 = new Student ("Radifa",20,3.23,["Bangla","English","Urdu"]);
+var student3 = new Student ("Ripon",29,5.23,["Bangla","English","Hindi","Arbiya"]);
 
-// Removing Element Using Splice
-//  names.splice(1,2);
-//  console.log(names);
- 
- // Slice
- 
-//  var newarray = names.slice(1)
-//  console.log(newarray);
-//  console.log(names);
-
-// Sorting
-// var sortName = names.sort();
-// names.reverse();
-// console.log(sortName);
-
-//Number Sorting
-
-var number = [10,20,45,68,3,1];
-number.sort(function(a,b){
-  // return a-b;
-  return b-a;
-});
-console.log(number);
+student1.display();
+student2.display();
+student3.display();

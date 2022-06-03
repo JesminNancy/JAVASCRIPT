@@ -1,14 +1,10 @@
-var heading3 = document.createElement("h1");
-var text = document.createTextNode("this is a heading 3");
-heading3.appendChild(text);
-var mydiv = document.getElementById("my-div");
-mydiv.appendChild(heading3);
 
-var heading2 = document.getElementsByTagName("h1")[1];
-mydiv.removeChild(heading2);
+var myVar = document.getElementById("paraID");
 
-var heading0 = document.createElement("h1");
-var text0 = document.createTextNode("this is a heading 0");
-heading0.appendChild(text0);
-var heading1 = document.getElementsByTagName("h1")[0];
-mydiv.insertBefore(heading0, heading1);
+function addstyle(){
+  myVar.classList.add("para_style");
+}
+
+function removestyle(){ 
+  myVar.classList.remove("para_style");
+}

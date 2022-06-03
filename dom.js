@@ -1,20 +1,14 @@
+var heading3 = document.createElement("h1");
+var text = document.createTextNode("this is a heading 3");
+heading3.appendChild(text);
+var mydiv = document.getElementById("my-div");
+mydiv.appendChild(heading3);
 
-//  var myVar = document.querySelector("#para");
-// function myMessage1(){
-//   myVar.innerHTML = "You have cilked on button 1";
-  
-// }
-// function myMessage2(){
-//   myVar.innerHTML = "You have cilked on button 2";
-  
-// }
+var heading2 = document.getElementsByTagName("h1")[1];
+mydiv.removeChild(heading2);
 
-
-var myVar = document.querySelector("#picture");
-function myMessage1(){
-    myVar.src = "images/bcd.jpg";
-    
-   }
-function myMessage2(){
-  myVar.src = "images/img.jpg"; 
-}
+var heading0 = document.createElement("h1");
+var text0 = document.createTextNode("this is a heading 0");
+heading0.appendChild(text0);
+var heading1 = document.getElementsByTagName("h1")[0];
+mydiv.insertBefore(heading0, heading1);

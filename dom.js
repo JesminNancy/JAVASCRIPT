@@ -73,7 +73,7 @@ function audioPlay(text){
    
    }
 }
-
+//Animation
 function playAnimation(text){
 
 var selectButton = document.querySelector("." + text);
@@ -84,3 +84,17 @@ selectButton.classList.add("anim");
   },1000);
 
 }
+
+
+//Keypress Listener
+
+document.addEventListener("keypress", function(event){
+  var text = event.key;
+  audioPlay(text);
+  playAnimation(text)
+});
+
+// document.addEventListener("keypress", function(event){
+//   var para = event.key;
+//   document.querySelector("p").innerHTML="You have pressed" + para ;
+// });

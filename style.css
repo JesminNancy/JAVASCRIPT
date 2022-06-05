@@ -1,6 +1,6 @@
-.para_style{
-color: red;
-font-size: 3rem;
-font-weight: bold;
-font-style: italic;
+.myButton{
+background-color: green;
+color: #000;
+width: 100px;
+height: 50px;
 }

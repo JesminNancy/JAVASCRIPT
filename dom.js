@@ -21,14 +21,14 @@ myVar.addEventListener("mouseout", function(){
  
 // Multiple Event Listener 
 
-var len = document.querySelectorAll(".myButton").length;
-for(i=0; i<len; i++){
+// var len = document.querySelectorAll(".myButton").length;
+// for(i=0; i<len; i++){
 
-  document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
-    var text = this.innerHTML;
-    document.querySelector("h1").innerHTML = text +  " is clicked";
-    });
-}
+//   document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+//     var text = this.innerHTML;
+//     document.querySelector("h1").innerHTML = text +  " is clicked";
+//     });
+// }
 
 /* document.querySelectorAll(".myButton")[1].addEventListener("click", function(){
   var text = this.innerHTML;
@@ -38,3 +38,38 @@ document.querySelectorAll(".myButton")[2].addEventListener("click", function(){
     var text = this.innerHTML;
     document.querySelector("h1").innerHTML = text +  " is clicked";
   }); */
+  
+// Audio Event Listener  
+
+for(i=0; i<3; i++){
+ document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+ 
+     var text = this.innerHTML;
+     console.log(text);
+     audioPlay(text);
+   
+   
+ });
+ 
+}
+
+
+function audioPlay(text){
+
+       
+   switch(text){
+       case "a" :
+        var audio = new Audio("sounds/a.mp3");
+        audio.play();
+        break;
+      case "b" :
+        var audio = new Audio("sounds/b.mp3");
+        audio.play();
+        break;
+      case "c" :
+        var audio = new Audio("sounds/c.mp3");
+        audio.play();
+        break;
+   
+   }
+}

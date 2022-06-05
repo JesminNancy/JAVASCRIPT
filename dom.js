@@ -47,7 +47,7 @@ for(i=0; i<3; i++){
      var text = this.innerHTML;
      console.log(text);
      audioPlay(text);
-   
+     playAnimation(text)
    
  });
  
@@ -72,4 +72,15 @@ function audioPlay(text){
         break;
    
    }
+}
+
+function playAnimation(text){
+
+var selectButton = document.querySelector("." + text);
+selectButton.classList.add("anim");
+
+  setTimeout(function(){
+    selectButton.classList.remove("anim");
+  },1000);
+
 }

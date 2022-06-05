@@ -1,6 +1,10 @@
-.myButton{
-background-color: green;
-color: #000;
+button{
 width: 100px;
 height: 50px;
+margin: 20px;
+}
+
+.anim{
+box-shadow: 0 15px 18px 0 #000;
+opacity: 0.5;
 }

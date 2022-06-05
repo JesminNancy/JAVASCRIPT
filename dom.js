@@ -1,100 +1,52 @@
-// Changing Style Dynamically
-/* var myVar = document.getElementById("paraID");
+//Input Text Event Object
 
- function addstyle(){
-  myVar.classList.add("para_style");
- }
+// const input = document.querySelector("input");
+// input.addEventListener("change", changeHandler)
 
- function removestyle(){ 
- myVar.classList.remove("para_style");
-} */
-
-// Event Listener
-
-/* var myVar = document.querySelector("h1");
- myVar.addEventListener("mouseover", function(){
-  myVar.classList.add("para_style");
-});
-myVar.addEventListener("mouseout", function(){
-  myVar.classList.remove("para_style");
- });*/
- 
-// Multiple Event Listener 
-
-// var len = document.querySelectorAll(".myButton").length;
-// for(i=0; i<len; i++){
-
-//   document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
-//     var text = this.innerHTML;
-//     document.querySelector("h1").innerHTML = text +  " is clicked";
-//     });
+// function  changeHandler(e){
+//      console.log(e);
+//      console.log(e.type);
+//      console.log(e.target);
+//       console.log(e.target.className);
+//      console.log(e.target.id);
+//      console.log(e.target.value);
 // }
 
-/* document.querySelectorAll(".myButton")[1].addEventListener("click", function(){
-  var text = this.innerHTML;
-  document.querySelector("h1").innerHTML = text +  " is clicked";
-  });  
-document.querySelectorAll(".myButton")[2].addEventListener("click", function(){
-    var text = this.innerHTML;
-    document.querySelector("h1").innerHTML = text +  " is clicked";
-  }); */
-  
-// Audio Event Listener  
+//Input Checkbox Event Object
 
-for(i=0; i<3; i++){
- document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
- 
-     var text = this.innerHTML;
-     console.log(text);
-     audioPlay(text);
-     playAnimation(text)
-   
- });
- 
-}
+// const programs = document.querySelectorAll("input[name=program]");
 
+// console.log(programs);
 
-function audioPlay(text){
-
-       
-   switch(text){
-       case "a" :
-        var audio = new Audio("sounds/a.mp3");
-        audio.play();
-        break;
-      case "b" :
-        var audio = new Audio("sounds/b.mp3");
-        audio.play();
-        break;
-      case "c" :
-        var audio = new Audio("sounds/c.mp3");
-        audio.play();
-        break;
-   
-   }
-}
-//Animation
-function playAnimation(text){
-
-var selectButton = document.querySelector("." + text);
-selectButton.classList.add("anim");
-
-  setTimeout(function(){
-    selectButton.classList.remove("anim");
-  },1000);
-
-}
-
-
-//Keypress Listener
-
-document.addEventListener("keypress", function(event){
-  var text = event.key;
-  audioPlay(text);
-  playAnimation(text)
-});
-
-// document.addEventListener("keypress", function(event){
-//   var para = event.key;
-//   document.querySelector("p").innerHTML="You have pressed" + para ;
+// Array.from(programs).map((program)=> {
+//   program.addEventListener("change",programHandler)
 // });
+
+// function programHandler(e){
+//   if (e.target.checked) {
+//   console.log(e.target.value);
+//   }
+// }
+
+const department = document.querySelector("#department");
+// console.log(department);
+
+department.addEventListener("change", departmentHandler);
+
+function departmentHandler(e) {
+  console.log(e.target.value);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,22 +8,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- <label for="name">Name:
-<input type="text" name="name" class="inputName" id="inputName">
-</label> -->
-<!-- <div>
-  <h2>Programming Language</h2>
-<label for="laravel"><input type="checkbox" name="program" id="" value="laravel">Laravel</label>
-<label for="javascript"><input type="checkbox" name="program" id="" value="javascript">Javascript</label>
-<label for="html"><input type="checkbox" name="program" id="" value="html">Html</label>
-</div> -->
-<label for="department">Department</label>
-<select name="department" id="department">
-<option value="cse">CSE</option>
-<option value="eee">EEE</option>
-<option value="llb">LLB</option>
-</select>
+  <form action="">
+    <div>
+      <label for="name">Name :
+        <input type="text" id="name" name="name" required autofocus />
+      </label>
+    </div>
+    <div>
+      <label for="email">Email :
+        <input type="email" id="email" name="email" size="30" required />
+      </label>
+    </div>
+    <div>
+      <label for="password">Password :
+        <input type="password" id="password"  name="password" required minlength="4" maxlength="8" />
+      </label>
+    </div>
+    <div>
+      <input type="submit" value="signup" />
+    </div>
+  </form>
   
   <script src="dom.js"></script>
 </body>

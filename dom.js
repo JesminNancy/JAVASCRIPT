@@ -1,28 +1,27 @@
-//Form Event Object (submit)
+//  audio / video events
+// canplay, play, playing, pause, progress, ended, volumechange, waiting
 
-// finding the elements
-const form = document.querySelector("form");
-const name = form.querySelector("div #name");
-const email = form.querySelector("div #email");
-const password = form.querySelector("div #password");
+const video = document.querySelector("video");
+video.addEventListener("canplay", function () {
+  console.log("canplay");
+});
 
-form.addEventListener("submit", formHandler);
+video.addEventListener("play", function () {
+  console.log("play");
+});
+video.addEventListener("playing", function () {
+  console.log("playing");
+});
 
-function formHandler(e) {
-  e.preventDefault();
-
-  const userInfo = {
-    name: name.value,
-    email: email.value,
-    password: password.value,
-  };
-
-  console.log(userInfo);
-  name.value = "";
-  email.value = "";
-  password.value = "";
-}
-
+video.addEventListener("pause", function () {
+  console.log("pause");
+});
+video.addEventListener("ended", function () {
+  console.log("Thanks for watching");
+});
+video.addEventListener("volumechange", function () {
+  console.log("volumechange");
+});
 
 
 

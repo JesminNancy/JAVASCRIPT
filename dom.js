@@ -1,29 +1,28 @@
-//  audio / video events
-// canplay, play, playing, pause, progress, ended, volumechange, waiting
+// load, unload,
+// scroll
+// resize
+// toggle - details
 
-const video = document.querySelector("video");
-video.addEventListener("canplay", function () {
-  console.log("canplay");
-});
+//  window.addEventListener("load", function () {
+//    console.log("load");
+//  });
+//  window.addEventListener("unload", function () {
+//   console.log("unload");
+// });
+//  window.addEventListener("scroll", function () {
+//    console.log("scroll");
+//  });
 
-video.addEventListener("play", function () {
-  console.log("play");
-});
-video.addEventListener("playing", function () {
-  console.log("playing");
-});
+//  window.addEventListener("resize", function () {
+//    const width = window.outerWidth;
+//    const height = window.outerHeight;
+//    console.log(`height: ${height}, width: ${width}`);
+//  });
+const details = document.querySelector("details");
 
-video.addEventListener("pause", function () {
-  console.log("pause");
+details.addEventListener("toggle", function (e) {
+  console.log(e.target.open);
 });
-video.addEventListener("ended", function () {
-  console.log("Thanks for watching");
-});
-video.addEventListener("volumechange", function () {
-  console.log("volumechange");
-});
-
-
 
 
 

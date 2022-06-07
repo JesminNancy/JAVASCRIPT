@@ -1,17 +1,28 @@
-var locationDiv = document.querySelector(".location-div");
-var p1 = locationDiv.children[0];
-p1.textContent = location.href;
-var p2 = locationDiv.children[1];
-p2.textContent = location.hostname;
-var p3 = locationDiv.children[2];
-p3.textContent = location.protocol;
-var p4 = locationDiv.children[3];
-p4.textContent = location.port;
+// js BOM
+// popup boxes - alert, confirm, prompt
 
+// function deleteAnything(){
+//   let value = confirm("Are You Sure Delete?");
+//   if(value){
+//     console.log("Deleted");
+//   }else{
+//     console.log("Not Deleted");
+//   }
 
-var vistbtn = document.getElementById("visitbtn");
-vistbtn.addEventListener("click", function(){
+// }
 
-location.assign("https://www.youtube.com/");
+// deleteAnything();
 
-});
+let name = prompt("Enter Your Name : ");
+var h1 = document.createElement("h1");
+let text;
+
+if(name == null || name == ''){
+  text = "No name found";
+}else{
+  text= "Welcome "+ name;
+}
+
+var textNode = document.createTextNode(text);
+h1.appendChild(textNode);
+document.body.appendChild(h1);

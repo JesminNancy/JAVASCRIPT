@@ -1,16 +1,13 @@
-var c = document.getElementById("myCanvas");
+"use strict"
+//Default Parameter
+// function message(text = "Hello This Is Default Parameter"){
+// console.log(`${text}`);
+// }
+// message();
+// message("I love Es6 Programming");
 
-var ctx = c.getContext("2d");
-ctx.lineWidth = 3;
-ctx.strokeStyle = "black";
-ctx.strokeRect(10,10,380,280);
-ctx.fillStyle = "green";
-ctx.fillRect(12,12,378,276); 
-
-var centerX = c.width / 2;
-var centerY = c.height / 2;
-ctx.beginPath();
-ctx.arc(centerX,centerY,80,0,2*Math.PI,false);
-ctx.fillStyle = "red";
-ctx.fill(); 
-ctx.stroke();
+//Rest Parameter
+function sum(x, y,...z){
+  console.log(`x=${x}, y=${y}, z=${z}`);
+}
+sum(10,20,30,40,50,60)

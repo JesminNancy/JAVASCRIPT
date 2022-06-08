@@ -1,18 +1,16 @@
-// Error Handing try,catch, finally
-//The Throw Statement-Custom error
-document.querySelector("#checkbtn").addEventListener("click", function(){
+var c = document.getElementById("myCanvas");
 
-  var num = document.querySelector("#numText").value;
-  console.log(num);
-  
-  try{
-  if(num <5 ){
-      throw "Input is too low"
-  }else if(num > 10) {
-    throw "Input is too high"
-  }
-  }catch(e){
-  console.log(e);
-  }
+var ctx = c.getContext("2d");
+ctx.lineWidth = 3;
+ctx.strokeStyle = "black";
+ctx.strokeRect(10,10,380,280);
+ctx.fillStyle = "green";
+ctx.fillRect(12,12,378,276); 
 
-});
+var centerX = c.width / 2;
+var centerY = c.height / 2;
+ctx.beginPath();
+ctx.arc(centerX,centerY,80,0,2*Math.PI,false);
+ctx.fillStyle = "red";
+ctx.fill(); 
+ctx.stroke();

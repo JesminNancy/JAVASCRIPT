@@ -1,49 +1,37 @@
-//Object Literals
+// Array methods
+// find() returns the value of the first array element that passes certain condition
+let numbers = [5, 55, 30, 40, 50];
 
-// function studentsinfo(name,age){
-//   return{
-//     name,
-//     age 
-//   }
-  
-// }
-// // console.log(studentsinfo("Radifa",7));
+const evenNumbers = (value, index, array) => {
+  if (value % 2 === 0) {
+    return value;
+  }
+};
 
-// let message = {
-//     // body(){
-//     'body name'(){
-//       return "Hi I am Object Function";
-//     }   
-// }
-// // console.log(message.body());
-// console.log(message['body name']());
+let newNumbers = numbers.find(evenNumbers);
+// let newNumbers = numbers.find(x => x>25)
+console.log(newNumbers);
 
-// For..of and for..in
+// findIndex() returns the index of the first array element that passes certain condition
+console.log(numbers.findIndex(evenNumbers));
 
-// const names = ["Jorina","Rahim", "Karim"];
-// for(let name of names){
-//   console.log(name);
-// }
-// let students = {
-// name : "Rahim",
-// age : 23,
-// cgpa : 4.5
-// }
-// for(let x in students){
-//   console.log(`${x} : ${students[x]}`);
-// }
+const students = [
+  {
+    id: 101,
+    gpa: 3.5,
+  },
+  {
+    id: 102,
+    gpa: 2,
+  },
+  {
+    id: 103,
+    gpa: 4.5,
+  },
+  {
+    id: 104,
+    gpa: 5,
+  },
+];
 
-//For Vs Foreach
-
-// var numbers = [10,20,30,40,50];
-// for(var x= 0; x<numbers.length; x++){
-// console.log(numbers[x]);
-// }
-var numbers = [10,20,30,40,50];
-var squqreNumbers = [];
-numbers.forEach(function(x,index,arr){
-    // console.log(x);
-    // squqreNumbers.push(x*x);
-    arr[index] = x+5;
-});
-console.log(numbers);
+console.log(students.find((x) => x.gpa > 4));

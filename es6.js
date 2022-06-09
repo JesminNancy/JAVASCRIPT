@@ -24,11 +24,26 @@
 // for(let name of names){
 //   console.log(name);
 // }
-let students = {
-name : "Rahim",
-age : 23,
-cgpa : 4.5
-}
-for(let x in students){
-  console.log(`${x} : ${students[x]}`);
-}
+// let students = {
+// name : "Rahim",
+// age : 23,
+// cgpa : 4.5
+// }
+// for(let x in students){
+//   console.log(`${x} : ${students[x]}`);
+// }
+
+//For Vs Foreach
+
+// var numbers = [10,20,30,40,50];
+// for(var x= 0; x<numbers.length; x++){
+// console.log(numbers[x]);
+// }
+var numbers = [10,20,30,40,50];
+var squqreNumbers = [];
+numbers.forEach(function(x,index,arr){
+    // console.log(x);
+    // squqreNumbers.push(x*x);
+    arr[index] = x+5;
+});
+console.log(numbers);

@@ -1,37 +1,63 @@
-// Array methods
-// find() returns the value of the first array element that passes certain condition
-let numbers = [5, 55, 30, 40, 50];
+// destructuing assignment
 
-const evenNumbers = (value, index, array) => {
-  if (value % 2 === 0) {
-    return value;
-  }
-};
+//array destructuring
+let numbers = [10,20,30,40,50]
+let [num1, num2, num3, num4, num5] = numbers;
+console.log(numbers[0])
+console.log(num1)
+console.log(num2)
 
-let newNumbers = numbers.find(evenNumbers);
-// let newNumbers = numbers.find(x => x>25)
-console.log(newNumbers);
+let [x, y, ...z] = numbers;
+console.log(z)
 
-// findIndex() returns the index of the first array element that passes certain condition
-console.log(numbers.findIndex(evenNumbers));
+//swapping variables
+let m=10, n=5;
+[m,n] = [n,m];
+console.log(m);
+console.log(n);
 
-const students = [
-  {
-    id: 101,
-    gpa: 3.5,
-  },
-  {
-    id: 102,
-    gpa: 2,
-  },
-  {
-    id: 103,
-    gpa: 4.5,
-  },
-  {
-    id: 104,
-    gpa: 5,
-  },
-];
+//object destructuring
+// const student1 = {
+//     id : 101,
+//     fullName : 'Anisul Islam',
+//     gpa : 3.92
+// }
 
-console.log(students.find((x) => x.gpa > 4));
+// //we can also set default values of an object that does not exist
+// let {id, fullName, gpa, country = 'Bangladesh'} = student1
+
+// console.log(fullName)
+// console.log(country)
+
+
+//nested object destructuring
+const student2 = {
+    id : 101,
+    fullName : 'Anisul Islam',
+    gpa : 3.92,
+    languages : {
+        native : 'Bangla',
+        beginner : 'Finnish'
+    }
+}
+let {fullName, gpa, languages} = student2
+console.log(fullName)
+console.log(languages.native)
+
+
+// destructuring function arguments
+// const studentDetails = (studentInfo) => {
+//     console.log(`${studentInfo.firstName} ${studentInfo.roll} ${studentInfo.dob}`)
+// }
+
+const studentDetails = ({firstName, roll, dob}) => {
+    console.log(`${firstName} ${roll} ${dob}`)
+}
+
+const studentInfo = {
+    dob : '12/03/90',
+    roll : 101,
+    firstName : 'Anisul'
+}
+
+studentDetails(studentInfo)

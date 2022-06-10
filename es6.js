@@ -1,63 +1,49 @@
-// destructuing assignment
+// sync vs async
 
-//array destructuring
-let numbers = [10,20,30,40,50]
-let [num1, num2, num3, num4, num5] = numbers;
-console.log(numbers[0])
-console.log(num1)
-console.log(num2)
+// example of synchronous js
+// js is single threaded, synchronous programming language.
+// tasks will be added in call stack, when one task is done then it will moved to the next one (LIFO)
+console.log("------------------------------------");
+console.log("Example of Synchronous programming");
+console.log(`Task 1`);
+console.log(`Task 2`);
+console.log(`Task 3`);
+console.log(`Task 4`);
+console.log("------------------------------------\n\n");
+// setTimeout() is an asynchronous function
+// tasks will be added in call stack, when one task is done then it will moved to the next one (LIFO)
+// setTimeout() will move the task into web APIs where the task will be running in background
+// other task will continue in call stack
+// when the call stack is completely empty then task (callback functions) from web APIs will be moved to task queue (FIFO)
+// when the entire call stack is empty then from task queue task will moved to call stack and the process is done
 
-let [x, y, ...z] = numbers;
-console.log(z)
+console.log("Example of Asynchronous programming");
+// console.log(`Task 1`);
+// setTimeout(() => {
+//   console.log(`Task 2`);
+// }, 2000);
+// console.log(`Task 3`);
+// console.log(`Task 4`);
 
-//swapping variables
-let m=10, n=5;
-[m,n] = [n,m];
-console.log(m);
-console.log(n);
+const taskOne = () => {
+  console.log(`Task 1`);
+};
 
-//object destructuring
-// const student1 = {
-//     id : 101,
-//     fullName : 'Anisul Islam',
-//     gpa : 3.92
-// }
+const taskTwo = () => {
+  setTimeout(() => {
+    console.log(`Task 2`);
+    console.log("------------------------------------");
+  }, 2000);
+};
 
-// //we can also set default values of an object that does not exist
-// let {id, fullName, gpa, country = 'Bangladesh'} = student1
+const taskThree = () => {
+  console.log(`Task 3`);
+};
+const taskFour = () => {
+  console.log(`Task 4`);
+};
 
-// console.log(fullName)
-// console.log(country)
-
-
-//nested object destructuring
-const student2 = {
-    id : 101,
-    fullName : 'Anisul Islam',
-    gpa : 3.92,
-    languages : {
-        native : 'Bangla',
-        beginner : 'Finnish'
-    }
-}
-let {fullName, gpa, languages} = student2
-console.log(fullName)
-console.log(languages.native)
-
-
-// destructuring function arguments
-// const studentDetails = (studentInfo) => {
-//     console.log(`${studentInfo.firstName} ${studentInfo.roll} ${studentInfo.dob}`)
-// }
-
-const studentDetails = ({firstName, roll, dob}) => {
-    console.log(`${firstName} ${roll} ${dob}`)
-}
-
-const studentInfo = {
-    dob : '12/03/90',
-    roll : 101,
-    firstName : 'Anisul'
-}
-
-studentDetails(studentInfo)
+taskOne();
+taskTwo();
+taskThree();
+taskFour();
